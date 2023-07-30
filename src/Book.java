@@ -18,4 +18,26 @@ public class Book {
   public void setAuthor(String author) {
     this.author = author;
   }
+
+  @Override
+  public String toString(){
+    return "Book:" + getName() + "\nAuthor: " + getAuthor();
+  }
+
+  //public int getHashCode() {
+    //Доделать
+    //return  Object.getHash(name, author);
+  //}
+
+  @Override
+  public  boolean equals(Object obj) {
+    if(this==obj){
+      return true;
+    }
+    if(!(obj instanceof Book book)){
+      return false;
+    }
+    return (this.getName().equals(book.getName()) && this.getAuthor().equals(book.getAuthor()));
+  }
+
 }
