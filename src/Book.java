@@ -21,7 +21,7 @@ public class Book {
 
   @Override
   public String toString(){
-    return "Book:" + getName() + "\nAuthor: " + getAuthor();
+    return "Book: " + getName() + " Author: " + getAuthor();
   }
 
   //public int getHashCode() {
