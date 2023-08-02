@@ -9,7 +9,7 @@ public class Book {
   public void setName(String name) {
     this.name = name;
   }
-  public String getName() {
+  public String getTitle() {
     return name;
   }
   public String getAuthor() {
@@ -21,7 +21,7 @@ public class Book {
 
   @Override
   public String toString(){
-    return "Book: " + getName() + " Author: " + getAuthor();
+    return "Book: " + getTitle() + " Author: " + getAuthor();
   }
 
   //public int getHashCode() {
@@ -37,7 +37,7 @@ public class Book {
     if(!(obj instanceof Book book)){
       return false;
     }
-    return (this.getName().equals(book.getName()) && this.getAuthor().equals(book.getAuthor()));
+    return (this.getTitle().equals(book.getTitle()) && this.getAuthor().equals(book.getAuthor()));
   }
 
 }
